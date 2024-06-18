@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de login</title>
+</head>
+<body>
+    <h1>Tela de login</h1>
+
+    <form action="submit" method="POST"> {%csrf_token%}
+        <div>
+            <label>Nome de usuário:</label>
+            <input type="text" name="username">
+            <label>Senha:</label>
+            <input type="password" name="password">
+            <button type="submit">Entrar na sessão</button>
+            <a href="/registro">
+               <button type="button">Cadastrar-se</button> 
+            </a>
+            
+        </div>
+    </form>
+
+    {%for message in messages %}
+
+    <div>
+        <strong>Erro!!!</strong> {{massage}}
+    </div>
+
+     {%endfor%}
+
+</body>
+</html>

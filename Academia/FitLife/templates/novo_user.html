@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar um novo usuario</title>
+</head>
+<body>
+    <h1>Criar um novo usuario</h1>
+
+    <form action="submit" method="post"> {%csrf_token%}
+        <div>
+            <label>Seu nome: </label>
+            <input type="text" name="username">
+            <LABel>Seu cpf:</LABel>
+            <input type="text" name="cpf">
+            <label>Digite seu email: </label>
+            <input type="text" name="email">
+            <label>Digite sua senha: </label>
+            <input type="password" name="password">
+            <button type="submit">Concluir cadastro</button>
+        </div>
+    </form>
+
+</body>
+</html>
