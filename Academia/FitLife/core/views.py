@@ -41,3 +41,8 @@ def cadastroSubmit(request):
         User.objects.create_user(email=email,password=password,username=username)
         return redirect('/login') 
 
+def atualizarSenha():
+    user = User.get_username('')
+    User.set_password
+    
+

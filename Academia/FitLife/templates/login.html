@@ -4,7 +4,10 @@
     <title>Tela de login</title>
 </head>
 <body>
+   
+    <div>
     <h1>Tela de login</h1>
+    </div>
 
     <form action="submit" method="POST"> {%csrf_token%}
         <div>
@@ -12,21 +15,26 @@
             <input type="text" name="username">
             <label>Senha:</label>
             <input type="password" name="password">
+            {%for message in messages %}
+            <div>
+                <strong>Erro!!!</strong> {{massage}}
+            </div>
+            {%endfor%}
+            <br><br>
             <button type="submit">Entrar na sessão</button>
-            <a href="/registro">
-               <button type="button">Cadastrar-se</button> 
-            </a>
-            
-        </div>
+            <a href="/reset_password">
+               <button type="button">Esqueci a minha senha </button> 
+               <br><br>
+               <a href="/registro">
+                   <button type="button">Cadastrar-se</button> 
+                </a>
+            </a>           
+        </div>       
     </form>
+   
 
-    {%for message in messages %}
 
-    <div>
-        <strong>Erro!!!</strong> {{massage}}
-    </div>
-
-     {%endfor%}
+    
 
 </body>
 </html>
