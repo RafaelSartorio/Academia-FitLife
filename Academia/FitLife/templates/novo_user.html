@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar um novo usuario</title>
-</head>
-<body>
+{% extends "head.html" %}
+
+{% block content %}
     <h1>Criar um novo usuario</h1>
 
     <form action="submit" method="post"> {%csrf_token%}
@@ -22,5 +17,4 @@
         </div>
     </form>
 
-</body>
-</html>
+{% endblock content %}

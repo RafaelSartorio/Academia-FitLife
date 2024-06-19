@@ -7,6 +7,9 @@ from django.contrib import messages
 
 
 def loginSubmit(request):
+    context = {
+        'title': 'Login'
+    }
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -16,22 +19,43 @@ def loginSubmit(request):
             return redirect('/main/perfil')
         else:
             messages.error(request, "Usuário ou senha inválido")
-    return render(request, 'login.html')
+    return render(request, 'login.html', context)
 
 
 def telaPrincipal(request):
-    return render(request ,'main.html')
+    context = {
+        'title': 'Home'
+    }
+    return render(request ,'main.html', context)
 
+# *COMENTEI PARA USOS FUTUROS*
 @login_required(login_url='/login/')
 def telaPerfil(request):
-    return render(request,'perfil.html')
+
+    # Obtém o usuário logado atualmente
+    usuario = request.user
+
+    # Filtra as aulas para o usuário logado
+    aulas = Aulas.objects.filter(aluno=usuario)
+    
+    # Prepara o dicionário de contexto
+    context = {
+        'title': 'Perfil',
+        'aulas': aulas,  # Passa o queryset filtrado de Aulas para o template
+    }
+
+    # Renderiza o template 'perfil.html' com o contexto
+    return render(request, 'perfil.html', context)
 
 def logoutUser(request):
     logout(request)
     return redirect('/main')
 
 def adicionarUser(request):
-    return render(request,'novo_user.html')
+    context = { 
+        'title': 'Cadastro' 
+    }
+    return render(request,'novo_user.html', context)
 
 def cadastroSubmit(request):
         if request.method == 'POST':

@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tela de login</title>
-</head>
-<body>
-   
-    <div>
-    <h1>Tela de login</h1>
-    </div>
+{% extends "head.html" %}
 
+{% block content %}
+
+
+    <div>
+        <h1>Tela de login</h1>
+    </div>
     <form action="submit" method="POST"> {%csrf_token%}
         <div>
             <label>Nome de usuário:</label>
@@ -30,11 +27,7 @@
                 </a>
             </a>           
         </div>       
-    </form>
-   
 
 
-    
 
-</body>
-</html>
+{% endblock content %}

@@ -15,10 +15,26 @@ class Aulas(models.Model):
     
     def data_evento_criacao(self):
         return self.data_aula.strftime('%d/%m/%Y as %H:%M hrs')
-    
+
 # class user(models.Model):
 #     User = models.CharField(max_length=30, verbose_name='usuario')
 #     password = models.TextField(verbose_name='senha')
 #     email = models.TextField(verbose_name='email')
+
+# class Plano(models.Model):
+#     nomePlan = models.CharField()
+#     beneficios = models.TextField()
+#     parcelas = models.TextField()
+#     valor = models.TextField()
+
+#     class Meta:
+#         db_table='Planos'
+
+#     def __str__(self):
+#         return self.nomePlan
+
     
+
+
+
 
