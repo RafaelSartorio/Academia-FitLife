@@ -56,7 +56,7 @@ ROOT_URLCONF = 'FitLife.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates',)],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,7 +75,7 @@ STATIC_URL = '/static/'
 
 # Diretórios adicionais onde Django irá procurar por arquivos estáticos
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'FitLife/static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 WSGI_APPLICATION = 'FitLife.wsgi.application'

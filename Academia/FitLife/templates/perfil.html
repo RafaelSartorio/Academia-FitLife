@@ -1,7 +1,7 @@
 {% extends "head.html" %}
 
 {% block content %}
-    <h1>Seja bem vindo</h1> {%csrf_token%}
+    <h1>Seja bem vindo , {{username}}</h1> {%csrf_token%}  
 
     <a href="/logout">
         <button type="button">Deslogar</button>

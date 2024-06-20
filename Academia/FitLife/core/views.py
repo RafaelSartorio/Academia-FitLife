@@ -37,11 +37,13 @@ def telaPerfil(request):
 
     # Filtra as aulas para o usuário logado
     aulas = Aulas.objects.filter(aluno=usuario)
+
     
     # Prepara o dicionário de contexto
     context = {
         'title': 'Perfil',
         'aulas': aulas,  # Passa o queryset filtrado de Aulas para o template
+        'username': usuario.username
     }
 
     # Renderiza o template 'perfil.html' com o contexto
@@ -63,7 +65,7 @@ def cadastroSubmit(request):
             password = request.POST.get('password')
             email = request.POST.get('email')
         User.objects.create_user(email=email,password=password,username=username)
-        return redirect('/login') 
+        return redirect('/main/perfil/') 
 
 def atualizarSenha():
     user = User.get_username('')
