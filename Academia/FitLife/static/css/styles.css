@@ -1,4 +1,39 @@
 .principal{
   background-color:rgb(181, 86, 57);
 }
+
+.navbar{
+  background-color:rgb(181, 86, 57);
+  overflow: hidden;
+  width: auto;
+  height: 85px;
+  border-radius: 10px;
+}
+
+.navbar h1{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: auto;
+  height: 50%;
+}
+
+.navbar img{
+  width: 125px;
+  height: auto;
+  float: left;
+  filter: invert(100%);
+}
+
+head{
+  height: 100px;
+
+}
+
+.navbar botão{
+  margin-right: 0px;
+}
+
   
+.but{
+  color: pink;
+}
