@@ -12,7 +12,8 @@ Este é o meu projeto Django, uma aplicação web construída usando o framework
 ```bash
 # Navegue até o diretório do seu projeto
 cd caminho/do/seu/projeto
-
+```
+```bash
 # Crie um ambiente virtual chamado 'venv'
 python -m venv venv
 ```
@@ -84,5 +85,3 @@ Este projeto está licenciado sob a licença [MIT License](LICENSE).
 Se você tiver qualquer dúvida ou problema, sinta-se à vontade para abrir uma issue ou entrar em contato.
 
 ```
-
-Este arquivo `README.md` deve fornecer todas as informações necessárias para configurar, ativar e executar seu projeto Django, além de dar uma visão geral das URLs principais disponíveis na aplicação.
