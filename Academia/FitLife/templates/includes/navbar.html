@@ -1,0 +1,25 @@
+{% load static %}
+
+<div id="main">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <img src="{% static 'imagens/logo.png' %}" alt="" height="70px" style="margin-right: 10px; margin-left:10px; ">
+    <a class=" font-viga navbar-brand mr-auto" href="#">FitLife</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="{% static 'imagens/navbar-icon.png' %}" alt="" height="50px">
+    </button>
+  </nav>
+
+  <div class="collapse" id="sidebar" style="position: fixed; top: 0; right: 0; height: 100%; width: 250px; background-color: orange;">
+    <div class="p-4">
+      <button type="button" class="close" data-toggle="collapse" data-target="#sidebar" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ul class="list-unstyled">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

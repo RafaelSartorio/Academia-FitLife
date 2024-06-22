@@ -1,39 +1,90 @@
-.principal{
-  background-color:rgb(181, 86, 57);
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+.font-viga{
+    font-family: "Viga", sans-serif;
+    font-size: 40px !important;
+    color: white !important;
 }
 
-.navbar{
-  background-color:rgb(181, 86, 57);
-  overflow: hidden;
-  width: auto;
-  height: 85px;
-  border-radius: 10px;
+
+/*//////////////////////////////////////////////// NAVBAR //////////////////////////////////////////////////////////*/
+
+#navbar{
+    background-color: orange !important;
 }
 
-.navbar h1{
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: auto;
-  height: 50%;
+/* Estilo para a barra lateral */
+#sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+    width: 250px !important;
+    background-color: orange !important;
+    padding-top: 70px !important; /* Espaçamento para acomodar o cabeçalho */
+    overflow-y: auto !important; /* Adiciona scroll caso haja muitos itens */
 }
 
-.navbar img{
-  width: 125px;
-  height: auto;
-  float: left;
-  filter: invert(100%);
+/* Estilo para centralizar os itens da lista */
+.list-unstyled {
+    padding-left: 0 !important;
+    text-align: center !important; /* Centraliza horizontalmente */
+    margin-top: 50% !important; /* Alinha no meio da barra lateral */
+    transform: translateY(-50%) !important; /* Ajusta para centralizar verticalmente */
 }
 
-head{
-  height: 100px;
-
+.list-unstyled li {
+    margin-bottom: 10px !important; /* Espaçamento entre os itens da lista */
 }
 
-.navbar botão{
-  margin-right: 0px;
+.list-unstyled li a {
+    color: #fff !important; /* Cor do texto dos links */
+    font-size: 15px !important;
+    text-decoration: none !important; /* Remove sublinhado dos links */
+    display: block !important; /* Faz os links ocuparem toda a largura disponível */
+    padding: 10px 15px !important; /* Espaçamento interno dos links */
+    transition: background-color 0.3s !important; /* Transição suave para a mudança de cor de fundo */
 }
 
-  
-.but{
-  color: pink;
+.list-unstyled li a:hover {
+    color: #000 !important; /* Cor de fundo ao passar o mouse */
 }
+
+.close {
+    color: #fff !important; /* Cor do botão de fechar */
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: none !important;
+    border: none !important;
+    font-size: 1.5rem !important;
+}
+
+.close:hover {
+    color: #ccc !important; /* Cor do botão de fechar ao passar o mouse */
+    cursor: pointer !important;
+}
+
+
+/* Estilo para remover bordas e outros efeitos dos botões */
+.btn,
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Estilo para remover efeitos de hover e focus dos botões */
+.btn:hover,
+.btn:focus,
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-toggler {
+      display: flex !important; /* Oculta o botão padrão em telas maiores */
+    }
+  }
