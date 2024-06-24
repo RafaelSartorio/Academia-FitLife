@@ -2,32 +2,78 @@
 
 {% block content %}
 
+{%load static%}
 
-    <div>
-        <h1>Tela de login</h1>
+    <!-- <div class="ImagenLogin">
+        <img src="{% static 'imagens/logo.png' %}" alt="">
     </div>
     <form action="submit" method="POST"> {%csrf_token%}
-        <div>
-            <label>Nome de usuário:</label>
+        <div class="AreaDeLogin">
+            <label>Usuário:</label>
             <input type="text" name="username">
+            <br>
             <label>Senha:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" size="22px">
             {%for message in messages %}
             <div>
-                <strong>Erro!!!</strong> {{massage}}
+                <strong>Usuario ou senha invalidos</strong> {{massage}}
             </div>
             {%endfor%}
             <br><br>
             <button type="submit">Entrar na sessão</button>
+            <br>
+            <br>
             <a href="/reset_password">
-               <button type="button">Esqueci a minha senha </button> 
-               <br><br>
-               <a href="/registro">
-                   <button type="button">Cadastrar-se</button> 
-                </a>
-            </a>           
-        </div>       
-
+                <button type="button">Não lembra a sua senha?</button>  
+            </a>
+            <br><br>   
+            <div class="ImagenLogin">
+                <img src="{% static 'imagens/imaginAlter.png' %}" alt="" class="logo-img">
+            </div>  
+        </div>        -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login Page</title>
+            <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        </head>
+        <body>
+            <div class="login-container">
+                <div class="form-container">
+                    <div class="ImagenLogin">
+                        <img src="{% static 'imagens/logo.png' %}" alt="Logo" class="id_">
+                    </div>
+                    <form action="submit" method="POST"> 
+                        {% csrf_token %}
+                        <div class="AreaDeLogin">
+                            <label for="username">Usuário:</label>
+                            <input type="text" name="username" id="username">
+                            <br>
+                            <label for="password">Senha:</label>
+                            <input type="password" name="password" id="password" size="22px">
+                            {% for message in messages %}
+                            <div class="error-message">
+                                <strong>Usuário ou senha inválidos</strong> {{ message }}
+                            </div>
+                            {% endfor %}
+                            <br><br>
+                            <button type="submit">Entrar na sessão</button>
+                            <br><br>
+                            <a href="/reset_password">
+                                <button type="button" class="butão2">Não lembra a sua senha?</button>  
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="ImagenLogin">
+                    <img src="{% static 'imagens/imaginAlter.png' %}" alt="Imagem Alternativa" class="logo-img">
+                </div>
+            </div>
+        </body>
+        </html>
+        
 
 
 {% endblock content %}
