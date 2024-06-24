@@ -1,17 +1,89 @@
 {% extends "head.html" %}
 
 {% block content %}
-    
+
+{%load static%}
 <br>
-    <a href="perfil" class='but'>
-        <button type="button">Acesse o seu perfil</button>
-    </a>
-    
-    <p>
-        Venha se tornar nosso membro agora e aproveite todos os benefícios exclusivos! 
-        Ao se associar, você terá acesso a conteúdos especiais, eventos exclusivos, descontos imperdíveis 
-        e muito mais. Não perca essa oportunidade de fazer parte da nossa comunidade. 
-        Junte-se a nós e descubra tudo o que podemos oferecer para você!
-    </p>
+<div class="Main">
+    <div class="imageMain">
+        <div class="centered-content">
+            <div class="imagenTelaPrinicipal">
+                <h1>ACADEMIA É SAÚDE!</h1>
+                <img src="{% static 'imagens/imageM.png' %}" alt="Imagem Principal">
+            </div>
+            <div class="button-container">
+                <a href="/registro">
+                    <button type="button" class="Btt">Assine aqui!!</button>
+                </a>
+            </div>
+        </div>
+        <div class="textoMain">
+            <h2>SE TORNE MEMBRO!!!!</h2>
+            
+            <p>
+                Venha se tornar nosso membro agora e aproveite todos os benefícios exclusivos!
+                <br>
+                Ao se associar, você terá acesso a conteúdos especiais, eventos exclusivos, descontos imperdíveis
+                e muito mais. Não perca essa oportunidade de fazer parte da nossa comunidade.
+                <br>
+                Junte-se a nós e descubra tudo o que podemos oferecer para você!
+            </p>
+        </div>
+    </div>   
+</div>
+<br>
+<div class="planos">
+    <div class="PrincipalPlanos" align="center">
+        <h1>Planos disponiveis</h1>
+    </div>
+    <br>
+    <div class="planosDisponiveis">
+        <div class="planosDisponiveis">
+        <div class="membership-plan">
+            <h2 class="plan-title">FIT SILVER</h2>
+            <ul class="plan-details">
+                <li>Acesso a academia de sua preferência</li>
+                <li>Área de musculação e aeróbicos</li>
+                <li>Acesso ao app da fitLife</li>
+            </ul>
+            <div class="price-monthly">VALOR ANUAL<br>R$79,99/mês</div>
+            <div class="price-total">Total de R$959,88</div>
+            <br>
+            <a href="/registro">
+                <button class="Btt" align="center">Associe-se</button>
+            </a>
+        </div>
+        <br>
+        <div class="membership-plan">
+            <h2 class="plan-title">FIT GOLD</h2>
+            <ul class="plan-details">
+                <li>Acesso a academia de sua preferência</li>
+                <li>Área de musculação e aeróbicos</li>
+                <li>Acesso ao app da fitLife</li>
+            </ul>
+            <div class="price-monthly">VALOR ANUAL<br>12x R$ 99,99</div>
+            <div class="price-total">Total de R$ 1.119,88</div>
+            <br>
+            <a href="/registro">
+                <button class="Btt" align="center">Associe-se</button>
+            </a>   
+        </div>
+        <br>
+        <div class="membership-plan">
+            <h2 class="plan-title">FIT PREMIUM</h2>
+            <ul class="plan-details">
+                <li>Acesso à academia de sua preferência</li>
+                <li>Área de musculação e aeróbicos</li>
+                <li>Acesso ao app da fitLife</li>
+            </ul>
+            <div class="price-monthly">VALOR ANUAL<br>12x R$ 119,99</div>
+            <div class="price-total">Total de R$ 1.439,88</div>
+            <br>
+            <a href="/registro">
+                <button class="Btt" align="center">Associe-se</button>
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
