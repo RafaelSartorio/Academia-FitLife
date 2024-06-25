@@ -4,76 +4,49 @@
 
 {%load static%}
 
-    <!-- <div class="ImagenLogin">
-        <img src="{% static 'imagens/logo.png' %}" alt="">
-    </div>
-    <form action="submit" method="POST"> {%csrf_token%}
+<div class="login-container">
+    <div class="form-container">
+        <div class="ImagenLogin">
+            <img src="{% static 'imagens/logo.png' %}" style="filter: invert(100%);}" alt="Logo" class="id_">
+        </div>
+        <form action="submit" method="POST" style="height: 600px; width: 550px;"> 
+        {% csrf_token %}
         <div class="AreaDeLogin">
-            <label>Usuário:</label>
-            <input type="text" name="username">
-            <br>
-            <label>Senha:</label>
-            <input type="password" name="password" size="22px">
-            {%for message in messages %}
-            <div>
-                <strong>Usuario ou senha invalidos</strong> {{massage}}
-            </div>
-            {%endfor%}
-            <br><br>
-            <button type="submit">Entrar na sessão</button>
-            <br>
-            <br>
-            <a href="/reset_password">
-                <button type="button">Não lembra a sua senha?</button>  
-            </a>
-            <br><br>   
-            <div class="ImagenLogin">
-                <img src="{% static 'imagens/imaginAlter.png' %}" alt="" class="logo-img">
-            </div>  
-        </div>        -->
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Login Page</title>
-            <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        </head>
-        <body>
-            <div class="login-container">
-                <div class="form-container">
-                    <div class="ImagenLogin">
-                        <img src="{% static 'imagens/logo.png' %}" alt="Logo" class="id_">
+        <label for="username">Usuário:</label>
+        <input type="text" name="username" id="username" placeholder="Ex: André Felipe de Barros">
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" name="password" placeholder="Sua senha de acesso" id="password" size="22px">
+        {% for message in messages %}
+        <div class="error-message">
+            <strong>Usuário ou senha inválidos</strong> {{ message }}
+        </div>
+        {% endfor %}
+        <br><br>
+        <button type="submit" class="botao">Iniciar sessão</button>
+        <br><br>
+            <div class="links-suport">
+                <a href="/reset_password">
+                    <button type="button" class="botao2"> Não lembra a sua senha? </button>  
+                </a>
+                <br>
+
+                    <div class="line-container">
+                    
+                        <div class="line"></div><p class="ou"> ou </p><div class="line"></div>
+
                     </div>
-                    <form action="submit" method="POST"> 
-                        {% csrf_token %}
-                        <div class="AreaDeLogin">
-                            <label for="username">Usuário:</label>
-                            <input type="text" name="username" id="username">
-                            <br>
-                            <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" size="22px">
-                            {% for message in messages %}
-                            <div class="error-message">
-                                <strong>Usuário ou senha inválidos</strong> {{ message }}
-                            </div>
-                            {% endfor %}
-                            <br><br>
-                            <button type="submit">Entrar na sessão</button>
-                            <br><br>
-                            <a href="/reset_password">
-                                <button type="button" class="butão2">Não lembra a sua senha?</button>  
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <div class="ImagenLogin">
-                    <img src="{% static 'imagens/imaginAlter.png' %}" alt="Imagem Alternativa" class="logo-img">
-                </div>
+
+                <br>
+                Realize seu<a href="/registro"><button type="button" class="botao2">cadastro!</button></a>
             </div>
-        </body>
-        </html>
-        
+        </div>
+    </form>
+    </div>
+    <div class="image-container">
+        <img src="{% static 'imagens/Background-Academia.jpg' %}" alt="Imagem Alternativa" class="background-img">
+    </div>
+</div>
 
 
 {% endblock content %}

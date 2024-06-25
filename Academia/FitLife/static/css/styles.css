@@ -223,11 +223,19 @@ body {
     padding: 20px;   
     border-radius: 10px;
     height: calc(100vh - 100px);
+    z-index: 1;
 }
 
 .form-container {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-right: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+
 }
 
 .ImagenLogin {
@@ -260,23 +268,84 @@ body {
     box-sizing: border-box;
 }
 
-.AreaDeLogin button {
+.botao {
     padding: 10px;
     margin: 10px 0;
     background-color: #B55639;
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 5px;
+    font-size: 21px;
 }
 
-
-
-.AreaDeLogin button:hover {
+.botao:hover {
     background-color: #b06c58;
+}
+
+.line-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.line {
+    width: 64px;
+    height: 2px;
+    background-color: gray;
+}
+
+.links-suport {
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.links-suport .botao2 {
+    display: inline-block; /* Garante que os botões se comportem corretamente */
+    margin: 10px; /* Espaçamento entre os botões */
+}
+
+.line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.ou{
+    margin-bottom: 3px;
+    color: gray;
+}
+
+.line {
+    width: 100px;
+    height: 1px;
+    background-color: gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.botao2{
+    color: #B55639;
+    font-size: 18px;
+    position: center;
+    border: none;  /* Remove a borda */
+    background: none;  /* Remove o fundo */
+    box-shadow: none;  /* Remove a sombra */
+    padding: 0;
+
+}
+
+.botao2:hover{
+
 }
 
 .error-message {
     color: red;
     margin-top: 10px;
+}
+
+footer{
+    position: relative;
+    z-index: 1000 !important; /* Ajuste o z-index conforme necessário para garantir que o footer esteja sobreposto */
 }

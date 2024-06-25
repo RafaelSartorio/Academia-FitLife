@@ -8,7 +8,8 @@ from django.contrib import messages
 
 def loginSubmit(request):
     context = {
-        'title': 'Login'
+        'title': 'Login',
+        'instagram': 'https://www.instagram.com/'
     }
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -24,7 +25,8 @@ def loginSubmit(request):
 
 def telaPrincipal(request):
     context = {
-        'title': 'Home'
+        'title': 'Home',
+        'instagram': 'https://www.instagram.com/'
     }
     return render(request ,'main.html', context)
 
@@ -43,7 +45,8 @@ def telaPerfil(request):
     context = {
         'title': 'Perfil',
         'aulas': aulas,  # Passa o queryset filtrado de Aulas para o template
-        'username': usuario.username
+        'username': usuario.username,
+        'instagram': 'https://www.instagram.com/'
     }
 
     # Renderiza o template 'perfil.html' com o contexto
@@ -55,7 +58,8 @@ def logoutUser(request):
 
 def adicionarUser(request):
     context = { 
-        'title': 'Cadastro' 
+        'title': 'Cadastro',
+        'instagram': 'https://www.instagram.com/'
     }
     return render(request,'novo_user.html', context)
 

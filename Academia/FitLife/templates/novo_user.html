@@ -1,7 +1,7 @@
 {% extends "head.html" %}
 
 {% block content %}
-    <h1>Criar um novo usuario</h1>
+    <!-- <h1>Criar um novo usuario</h1>
 
     <form action="submit" method="post"> {%csrf_token%}
         <div>
@@ -15,6 +15,57 @@
             <input type="password" name="password">
             <button type="submit">Concluir cadastro</button>
         </div>
-    </form>
+    </form> -->
+    {% load static %}
 
+    
+    <div class="login-container">
+        <div class="form-container">
+            <div class="ImagenLogin">
+                <img src="{% static 'imagens/logo.png' %}" style="filter: invert(100%);}" alt="Logo" class="id_">
+            </div>
+            <form action="submit" method="POST" style="height: 600px; width: 550px;"> 
+            {% csrf_token %}
+            <div class="AreaDeLogin">
+            <label for="username">Usuário:</label>
+            <input type="text" name="username" id="username" placeholder="Ex: André Felipe de Barros">
+            <br>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" placeholder="Sua senha de acesso" id="password" size="22px">
+            {% for message in messages %}
+            <div class="error-message">
+                <strong>Usuário ou senha inválidos</strong> {{ message }}
+            </div>
+            {% endfor %}
+            <br><br>
+            <button type="submit" class="botao">Iniciar sessão</button>
+            <br><br>
+                <div class="links-suport">
+                    <a href="/reset_password">
+                        <button type="button" class="botao2"> Não lembra a sua senha? </button>  
+                    </a>
+                    <br>
+
+                        <div class="line-container">
+                        
+                            <div class="line"></div><p class="ou"> ou </p><div class="line"></div>
+
+                        </div>
+
+                    <br>
+                    Realize seu<a href="/registro"><button type="button" class="botao2">cadastro!</button></a>
+                </div>
+            </div>
+        </form>
+    </div>
+            <div class="image-container">
+                <img src="{% static 'imagens/Background-Academia.jpg' %}" alt="Imagem Alternativa" class="background-img">
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    
 {% endblock content %}
