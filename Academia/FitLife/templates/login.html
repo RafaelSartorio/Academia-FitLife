@@ -9,8 +9,7 @@
         <div class="ImagenLogin">
             <img src="{% static 'imagens/logo.png' %}" style="filter: invert(100%);" alt="Logo" class="id_">
         </div>
-        <form action="submit" method="POST" style="height: 600px; width: 550px;"> 
-        {% csrf_token %}
+        <form action="submit" method="POST" style="height: 600px; width: 550px;">  {% csrf_token %}
         <div class="AreaDeLogin">
         <label for="username">Usuário:</label>
         <input type="text" name="username" id="username" placeholder="Ex: André Felipe de Barros">

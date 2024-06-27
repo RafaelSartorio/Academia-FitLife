@@ -3,10 +3,11 @@
 {% block content %}
     <h1>Seja bem vindo , {{username}}</h1> {%csrf_token%}  
 
-    <a href="/logout">
+    <a href="/logout" align="left">
         <button type="button" class="button">Deslogar</button>
     </a>
 
+    <br>
     {%for aula in aulas%}
     <ul>
     <li> 
