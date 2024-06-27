@@ -125,14 +125,13 @@
     margin-bottom: 20px; /* Espaçamento opcional entre a imagem/botão e o texto */
 }
 
-.imagenTelaPrinicipal h1{
-    text-align: left;
-    display: inline-block;
-    color: #ffffff;
-}       
 .imagenTelaPrinicipal {
-    display: inline-block; /* Para alinhar a imagem e o botão lado a lado */
-    text-align: center;
+    text-align: center; /* Alinha o conteúdo dentro de imagenTelaPrinicipal ao centro */
+}
+
+.centered-image {
+    display: block; /* Garante que a imagem ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem */
 }
 
 .Btt {
@@ -153,7 +152,7 @@
 
 .textoMain {
     text-align: center; /* Alinha o texto à esquerda */
-    color: #ffffff;
+    color: #000;
 }
 
 
@@ -200,6 +199,13 @@
     gap: 20px;  
 }
 
+.membro-torne {
+    font-family: "Viga", sans-serif;
+}
+
+.button-container {
+    width: fit-content;
+}
 
 /* ======================== fim da tela principal=========================================================== */
 

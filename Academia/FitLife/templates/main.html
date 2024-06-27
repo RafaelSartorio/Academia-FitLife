@@ -3,38 +3,31 @@
 {% block content %}
 
 {%load static%}
-<br>
+
 <div class="Main">
+    <div class="button-container">
+        <h1 style="color: #fff;">ACADEMIA É SAÚDE!</h1>
+        <a href="/registro">
+        <button type="button" class="Btt">Assine aqui!!</button>
+        </a>
+    </div>
     <div class="imageMain">
         <div class="centered-content">
-            <div class="button-container">
-                <h1 style="color: #fff;">ACADEMIA É SAÚDE!</h1>
-                <a href="/registro">
-                    <button type="button" class="Btt">Assine aqui!!</button>
-                </a>
-            </div>
-            <div class="imagenTelaPrinicipal">
-                <img src="{% static 'imagens/imageM.png' %}" alt="Imagem Principal">
-            </div>
-        </div>
-        <div class="textoMain">
-            <h2>SEJA MEMBRO!!!!</h2>
             
-            <p>
-                Venha se tornar nosso membro agora e aproveite todos os benefícios exclusivos!
-                <br>
-                Ao se associar, você terá acesso a conteúdos especiais, eventos exclusivos, descontos imperdíveis
-                e muito mais. Não perca essa oportunidade de fazer parte da nossa comunidade.
-                <br>
-                Junte-se a nós e descubra tudo o que podemos oferecer para você!
-            </p>
         </div>
+        <img src="{% static 'imagens/imageM.png' %}" alt="Imagem Principal" class="centered-image">
     </div>   
+</div>
+<div class="textoMain">
+    <h2 class="membro-torne">SE TORNE MEMBRO</h2> <h2 style=" color: #B55639 "> R$ 79,99/m </h2>
+        <h3 style=" font-size: 15px !important; ">Venha se tornar nosso membro agora e aproveite todos os benefícios exclusivos!</h3>
+        <h3 style=" font-size: 15px !important; padding-right: 500px; padding-left: 500px; ">Ao se associar, você terá acesso a conteúdos especiais, eventos exclusivos, descontos imperdíveis
+        e muito mais. Não perca essa oportunidade de fazer parte da nossa comunidade. Junte-se a nós e descubra tudo o que podemos oferecer para você!</h3>
 </div>
 <br>
 <div class="planos">
     <div class="PrincipalPlanos" align="center">
-        <h1>Planos disponíveis</h1>
+        <h1>PLANOS</h1>
     </div>
     <br>
     <div class="planosDisponiveis">
