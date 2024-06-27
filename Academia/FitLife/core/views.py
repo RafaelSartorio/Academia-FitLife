@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 
+
 def loginSubmit(request):
     context = {
         'title': 'Login',
@@ -75,4 +76,29 @@ def atualizarSenha():
     user = User.get_username('')
     User.set_password
     
+def adicionarAula(request):
+    return render(request, 'AdicionarAula.html')
 
+def ConfirmarAula(request):
+    if request.method == "POST":
+        nomeAula = request.POST.get('nomeAula')
+        data_aula = request.POST.get('data_aula')
+        usuario = request.user 
+
+        if nomeAula and data_aula and usuario:
+            Aulas.objects.create(
+                nomeAula=nomeAula,
+                data_aula=data_aula,
+                aluno=usuario
+            )
+            return redirect('/main/perfil/')
+    
+    return redirect('/main/perfil/')
+
+@login_required(login_url='/login/')
+def deletarEvento(request, id_evento):
+    usuario = request.user
+    aula = Aulas.objects.get(id=id_evento)
+    if usuario == aula.aluno:
+        aula.delete()
+    return redirect('/main/perfil/')

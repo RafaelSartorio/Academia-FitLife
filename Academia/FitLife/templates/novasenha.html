@@ -1,12 +1,29 @@
 {% extends "head.html" %}
 
 {% block content %}
-    <h2>Resetar Senha</h2>
-    <p>Insira seu e-mail para receber um link de redefinição de senha.</p>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Enviar</button>
-    </form>
+{%load static%}
+
+<style>
+.background-img{
+    
+}
+</style>
+   
+    <br>
+    <div class="redefinição">
+
+        <img src="{% static 'imagens/logo.png' %}" style="filter: invert(100%);" alt="Logo" class="id_">
+
+        <p>Insira seu e-mail para receber um link de redefinição de senha.</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+
+        <img src="{% static 'imagens/Background-Academia.jpg' %}" alt="Imagem Alternativa" class="background-img">
+    </div>
+
 {% endblock content %}

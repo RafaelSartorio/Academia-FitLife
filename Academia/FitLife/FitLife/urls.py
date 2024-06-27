@@ -30,6 +30,11 @@ urlpatterns = [
     path('logout/',views.logoutUser), 
     path('registro/',views.adicionarUser),
     path('registro/submit' ,views.cadastroSubmit),
+    path('reset_password_complete/main/perfil/' , views.telaPerfil),
+    path('main/perfil/main/perfil/adicionarAula/', views.adicionarAula),
+    path('main/perfil/main/perfil/adicionarAula/submit/', views.ConfirmarAula, name='confirmar_aula'),
+    path('agenda/evento/delete/<int:id_evento>/', views.deletarEvento, name='deletarEvento'),
+
 
     path('reset_password/', 
          auth_views.PasswordResetView.as_view(template_name="novasenha.html"), 

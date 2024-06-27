@@ -1,0 +1,28 @@
+{% extends "head.html" %}
+
+{% block content %}
+<br>
+<br>
+<div align="center">
+    <form action="submit/" method="post">
+    {% csrf_token %}
+    <label>Nome da aula:</label>
+    <br>
+    <input type="text" name="nomeAula">
+    <br>
+    <label>Data e hora da aula:</label>
+    <br>
+    <input type="datetime-local" name="data_aula">
+    <br>
+    <br>
+    <button type="submit">Adicionar aula</button>
+    <br>
+    <br>
+    <br>
+    <a href="/main/perfil/">
+        <button type="button">Cancelar marcação de aula</button>
+    </a>
+</form>
+</div>
+
+{% endblock content %}

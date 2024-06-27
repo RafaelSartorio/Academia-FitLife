@@ -4,14 +4,25 @@
     <h1>Seja bem vindo , {{username}}</h1> {%csrf_token%}  
 
     <a href="/logout">
-        <button type="button">Deslogar</button>
+        <button type="button" class="button">Deslogar</button>
     </a>
 
     {%for aula in aulas%}
     <ul>
     <li> 
-        {{ aula.nomeAula }} -- {{aula.descricao}}
-    </li>
+        {{ aula.nomeAula }} -- {{aula.data_aula}}  
+        <a href="{% url 'deletarEvento' id_evento=aula.id %}">Excluir aula</a>
+        </li>
     </ul>
     {%endfor%}
+    <a href="main/perfil/adicionarAula/"> 
+        <button type="button" class="Btt">Adicionar uma nova aula</button>
+    </a>
+
+    <style>
+    .button{
+        display: flex;
+        text-align: left;
+    }
+    </style>
 {% endblock content %}
