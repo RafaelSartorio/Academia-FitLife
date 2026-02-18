@@ -1,87 +1,100 @@
+# 💪 Academia FitLife
 
-# Meu Projeto Django
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge License](http://img.shields.io/static/v1?label=LICENSE&message=MIT&color=BLUE&style=for-the-badge)
 
-Este é o meu projeto Django, uma aplicação web construída usando o framework Django. Este README fornece instruções sobre como configurar o ambiente de desenvolvimento, ativar o ambiente virtual, rodar o projeto e informações sobre as principais URLs disponíveis.
+## 📄 Sobre o Projeto
 
-## Configuração do Ambiente de Desenvolvimento
+O **Academia FitLife** é uma aplicação web desenvolvida para apresentar uma academia moderna, promovendo saúde e bem-estar. O projeto visa facilitar o acesso às informações sobre planos, horários de aulas e contato com instrutores, além de oferecer uma interface intuitiva e responsiva para os usuários.
 
-### 1. Criar um Ambiente Virtual
-
-É altamente recomendado criar um ambiente virtual para isolar as dependências do seu projeto. Para criar um ambiente virtual, siga os passos abaixo:
-
-```bash
-# Navegue até o diretório do seu projeto
-cd caminho/do/seu/projeto
-```
-```bash
-# Crie um ambiente virtual chamado 'venv'
-python -m venv venv
-```
-
-### 2. Ativar o Ambiente Virtual
-
-Para ativar o ambiente virtual, use o comando correspondente ao seu sistema operacional:
-
-#### No Windows
-
-```bash
-venv\Scripts\activate
-```
-
-#### No MacOS/Linux
-
-```bash
-source venv/bin/activate
-```
-
-### 3. Instalar Dependências
-
-Com o ambiente virtual ativado, instale as dependências do projeto usando o `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Executar o Projeto
-
-Após configurar e ativar o ambiente virtual, você pode rodar o servidor de desenvolvimento do Django com o seguinte comando:
-
-```bash
-python manage.py runserver
-```
-
-O servidor de desenvolvimento estará disponível em `http://127.0.0.1:8000/`.
-
-## URLs Principais
-
-A aplicação possui as seguintes URLs principais:
-
-### `/home`
-
-Esta é a página inicial do seu projeto. Aqui, você pode fornecer uma visão geral ou uma mensagem de boas-vindas aos usuários.
-
-### `/admin`
-
-Esta URL leva ao painel administrativo do Django, onde você pode gerenciar modelos, usuários e outras funcionalidades administrativas. Certifique-se de criar um superusuário para acessar esta área usando:
-
-```bash
-python manage.py createsuperuser
-```
-
-### `/login`
-
-Esta URL é usada para a página de login do seu projeto. Usuários podem autenticar-se usando suas credenciais para acessar áreas restritas da aplicação.
-
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o projeto.
-
-## Licença
-
-Este projeto está licenciado sob a licença [MIT License](LICENSE).
+> **Nota:** Este projeto faz parte do meu portfólio de desenvolvimento web.
 
 ---
 
-Se você tiver qualquer dúvida ou problema, sinta-se à vontade para abrir uma issue ou entrar em contato.
+## 🚀 Funcionalidades
+
+- [x] **Home:** Apresentação da academia e proposta de valor.
+- [x] **Sobre Nós:** História da academia e equipe de profissionais.
+- [x] **Modalidades:** Descrição das aulas (Musculação, Crossfit, Zumba, Pilates, etc.).
+- [x] **Planos e Preços:** Tabela comparativa de mensalidades.
+- [x] **Calculadora de IMC:** Ferramenta para o usuário calcular seu Índice de Massa Corporal.
+- [x] **Formulário de Contato:** Área para dúvidas e matrículas.
+- [x] **Design Responsivo:** Adaptável para Celulares, Tablets e Desktops.
+
+---
+
+## 🎨 Layout
+
+Abaixo estão algumas telas da aplicação:
+
+<div align="center">
+  <img src="https://via.placeholder.com/300x600?text=Mobile+View" alt="Layout Mobile" width="300">
+  <img src="https://via.placeholder.com/600x400?text=Desktop+View" alt="Layout Desktop" width="600">
+</div>
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- **[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)** - Estruturação semântica.
+- **[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)** - Estilização e layout (Flexbox/Grid).
+- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)** - Interatividade e lógica (ex: Calculadora IMC).
+- **[Git](https://git-scm.com/)** - Controle de versão.
+- **[GitHub](https://github.com/)** - Hospedagem do código.
+
+---
+
+## 📂 Como executar o projeto
+
+Você pode acessar o projeto online ou rodá-lo localmente em sua máquina.
+
+### 🌐 Acesso Online (Deploy)
+Acesse o projeto através do link: **[Inserir Link do Vercel/Netlify/GitHub Pages aqui]**
+
+### 💻 Rodando Localmente
+
+1. **Clone o repositório:**
+```bash
+   git clone https://github.com/RafaelSartorio/Academia-FitLife
+```
+
+2. **Acesse a pasta do projeto:**
+```bash
+cd Academia-FitLife
 
 ```
+
+
+3. **Abra o arquivo `index.html`:**
+* Você pode abrir diretamente no seu navegador dando dois cliques no arquivo.
+* OU usar uma extensão como o **Live Server** no VS Code para simular um servidor local.
+
+
+
+---
+
+## 🤝 Como contribuir
+
+Contribuições são sempre bem-vindas! Se você tiver alguma ideia para melhorar o projeto:
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b minha-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "Feature: Minha nova feature"`
+4. Envie as suas alterações: `git push origin minha-feature`
+5. Abra um **Pull Request** no repositório original.
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE]() para mais detalhes.
+
+---
+
+## 👨‍💻 Autor
+
+<img style="border-radius: 50%;" src="https://www.google.com/search?q=https://avatars.githubusercontent.com/u/SEU_ID_AQUI%3Fv%3D4" width="100px;" alt=""/>
+
+Feito com 💜 por **Rafael Sartorio, André Felipe Barros e Igor Araujo**. Entre em contato!
